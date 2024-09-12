@@ -1,0 +1,75 @@
+{% extends 'index.html' %}
+{% block body %}
+
+<div class="rows">
+    <div class="row">
+        <button class="button is-primary is-outlined">Outlined</button>
+    </div>
+    <div class="row">
+        <button class="button is-primary is-outlined">Outlined</button>
+    </div>
+    <div class="row">
+        <button class="button is-primary is-outlined">Outlined</button>
+    </div>
+
+</div>
+
+<div class="container">
+    <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+        <thead>
+            <th>Info Name</th>
+            <th>Info Details</th>
+        </thead>
+        <tbody>
+            {%for i in info%}
+            <tr>
+                <td>
+                    {{i}}
+                </td>
+                <td>
+                    {{info[i]}}
+                </td>
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+
+</div>
+{% endblock %}
+
+....................................................
+
+
+
+{% extends 'index.html' %}
+{% block body %}
+<style>
+  /* Custom CSS to center the search box and button */
+  .center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .search-box {
+    display: flex;
+    align-items: center;
+  }
+</style>
+
+<form action="" method="POST">
+  <div class="center-container">
+    <div class="search-box">
+      <div class="field has-addons">
+        <p class="control">
+          <input class="input is-primary" type="text" name="ticker" placeholder="Ticker(PNB.NS)">
+        </p>
+        <p class="control">
+          <button class="button is-primary">Search</button>
+        </p>
+      </div>
+    </div>
+  </div>
+</form>
+{% endblock %}

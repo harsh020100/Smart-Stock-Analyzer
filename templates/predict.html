@@ -1,0 +1,37 @@
+{% extends 'index.html' %}
+
+{% block body %}
+
+
+<style>
+    /* Custom CSS to align buttons in a row */
+    .rows {
+        display: flex;
+        justify-content: center;
+    }
+
+    .row {
+        margin: 10px;
+    }
+    </style>
+
+
+<div class="rows">
+    <div class="row">
+        <a class="button is-dark is-outlined" style="text-decoration: solid;" href="{{url_for('funAnal')}}">Fundamental Analysis</a>
+    </div>
+    <div class="row">
+        <a class="button is-dark is-outlined" style="text-decoration: solid;" href="{{url_for('techAnal')}}">Technical Analysis</a>
+    </div>
+    <div class="row">
+        <a class="button is-dark is-dark" style="text-decoration: solid;" href="{{url_for('aiAnal')}}">AI Analysis</a>
+    </div>
+</div>
+
+<h3 class="title is-3" style="text-align: center;">Closing Price of {{ticker}}</h3>
+<br>
+<h3 class="title is-3" style="text-align: center;">{{closedPrice}}</h3>
+
+
+
+{%endblock%}

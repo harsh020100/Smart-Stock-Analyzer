@@ -1,0 +1,56 @@
+{% extends 'index.html' %}
+{% block body %}
+<style>
+
+  .center-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .search-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px; 
+  }
+
+
+  .center-container img {
+    max-width: 100%;
+    max-height: 200px; 
+  }
+
+
+  .input.is-primary {
+    width: 300px; 
+    font-size: 18px; 
+  }
+
+
+  .button.is-primary {
+    margin-top: 10px; 
+  }
+</style>
+
+<form action="" method="POST">
+  <div class="center-container">
+    <!-- Add the image here -->
+    <img src="/static/images/logo.png" alt="Image description">
+
+    <div class="search-box">
+      <div class="field has-addons">
+        <p class="control">
+          <input class="input is-dark is-rounded is-normal" type="text" name="ticker" placeholder="example : PNB.NS">
+        </p>
+        <p class="control">
+          <button class="button is-dark is-rounded is-normal">Search</button>
+        </p>
+      </div>
+    </div>
+  </div>
+</form>
+{% endblock %}

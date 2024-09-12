@@ -1,0 +1,90 @@
+{% extends 'index.html' %}
+
+{% block body %}
+<style>
+    /* Custom CSS to align buttons in a row */
+    .rows {
+        display: flex;
+        justify-content: center;
+    }
+
+    .row {
+        margin: 10px;
+    }
+
+    /* Styling for the closing price history section */
+    .closing-price-history {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .closing-price-history h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .closing-price-history img {
+        width: 55%;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+
+    .drcurve img {
+        width: 40%;
+        height: 40%;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+
+    .drcurve {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .drcurve h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+
+
+</style>
+
+<div class="rows">
+    <div class="row">
+        <a class="button is-dark is-outlined" style="text-decoration: solid;" href="{{url_for('funAnal')}}">Fundamental Analysis</a>
+    </div>
+    <div class="row">
+        <a class="button is-dark is-dark" style="text-decoration: solid;" href="">Technical Analysis</a>
+    </div>
+    <div class="row">
+        <a class="button is-dark is-outlined" style="text-decoration: solid;" href="{{url_for('aiAnal')}}">AI Analysis</a>
+    </div>
+</div>
+
+<div class="closing-price-history">
+    <h1 class="title">{{ ticker }} Closing Price History</h1>
+    <img src="data:image/png;base64,{{ plt_url }}" alt="{{ ticker }} Closing Price History">
+</div>
+
+<div class="closing-price-history">
+    <h1 class="title">{{ ticker }} Daily Return Graph</h1>
+    <img src="data:image/png;base64,{{ plt_dailyreturn_image }}" alt="{{ ticker }} Daily Return Graph">
+</div>
+
+
+<div class="drcurve">
+    <h1 class="title">{{ ticker }} Daily Return Curve</h1>
+    <img src="data:image/png;base64,{{ plt_dr_curve }}" alt="{{ ticker }} Daily Return Curve">
+</div>
+
+<div class="closing-price-history">
+    <h1 class="title">{{ ticker }} Moving Average 50-200 Months</h1>
+    <img src="data:image/png;base64,{{ plt_mv }}" alt="{{ ticker }} Moving Average 50-200 Months">
+</div>
+
+{%endblock%}

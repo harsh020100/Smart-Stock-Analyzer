@@ -1,0 +1,33 @@
+{% extends 'index.html' %}
+
+{% block body %}
+
+
+<div class="columns is-multiline" style="margin: 10px;">
+    {% for news in newsNifty %}
+    <div class="column is-one-quarter">
+        <div class="card">
+            <div class="card-image">
+                
+            </div>
+            <div class="card-content">
+                <div class="media">
+                    <div class="media-content">
+                        <p class="title is-4">{{ news.title }}</p>
+                        <p class="subtitle is-6">{{ news.author }} - {{ news.date }}</p>
+                    </div>
+                </div>
+                <div class="content">
+                    <p>{{ news.summary }}</p>
+                    <a href="{{ news.link }}" target="_blank">Read more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>About Me</title>
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+  <!-- Bulma Version 0.9.x-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.4/css/bulma.min.css" />
+  <link rel="stylesheet" type="text/css" href="../css/personal.css">
+  <script async type="text/javascript" src="../js/bulma.js">
+  </script>
+  
+</head>
+
+<body>
+  <nav class="navbar is-dark navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{{url_for('hello')}}">
+        <img src="/static/images/hlogo.jpeg" alt="Logo" width="35" height="10" class="d-inline-block align-text-top" style=" margin: 2px;">
+
+         <h6 style="color: white; margin-top: 10px;">Smart Stock Analyzer</h6>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item" style="margin-top: 14px;">
+            <a class="nav-link active" aria-current="page" href="{{url_for('newsFun')}}"><h6 style="color: white; margin-top: 14px;">News</h6></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="margin-top: 14px;">
+              <h6 style="color: white;margin-top: 14px;">More</h6></a>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="{{url_for('aboutMe')}}">About</a></li>
+              <li><a class="dropdown-item" href="{{url_for('contactUs')}}">Contact</a></li>
+            </ul>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <!-- Header -->
+  <section class="hero is-link is-fullheight is-fullheight-with-navbar">
+    <div class="hero-body">
+        <div class="center-container" style="height: 200px; width: 200px;">
+            <img src="/static/images/mtdp.png" alt="" style="align-items: center; width: 185px; height: 185px;">
+        </div>
+        <div class="container">Hello! I am
+            <h1 class="title is-1">
+              Harsh Srivastava
+            </h1>
+            <h2 class="subtitle is-3">
+              Backend Developer & Cybersecurity Analyst
+            </h2>
+          </div>
+        </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <!-- Title -->
+    <div class="section-heading">
+      <h3 class="title is-2">About Me</h3>
+      <h4 class="subtitle is-5">Jack of all trades, master of "some"</h4>
+      <div class="container">
+        <p>I am a 4th-year student at the Institute of Engineering and Management (IEM), pursuing Computer Science & Engineering with a specialization in Internet of Things and Cybersecurity including Blockchain Technology. My enthusiasm for technology drives my passion for Cybersecurity, App development, and Web development. My primary objective is to apply my skills and expertise to make significant contributions in the dynamic fields of cybersecurity and technology, creating groundbreaking solutions in the digital landscape.</p>
+      </div>
+    </div>
+
+   
+  <!-- Footer -->
+  <footer class="footer is-dark">
+    <div class="content has-text-centered is-light">
+      <p>
+        <strong>Smart Stock Analyzer</strong> by <a href="https://www.linkedin.com/in/harsh01200/">Harsh Srivastava</a>.<br><strong> Disclaimer:</strong> The information provided on this website is for educational and informational purposes only and should not be considered as financial advice.
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>

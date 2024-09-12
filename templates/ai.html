@@ -1,0 +1,73 @@
+{% extends 'index.html' %}
+
+{% block body %}
+<style>
+    /* Custom CSS to align buttons in a row */
+    .rows {
+        display: flex;
+        justify-content: center;
+    }
+
+    .row {
+        margin: 10px;
+    }
+
+    .center-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+
+</style>
+
+<div class="rows">
+    <div class="row">
+        <a class="button is-dark is-outlined" style="text-decoration: solid;" href="{{url_for('funAnal')}}">Fundamental Analysis</a>
+    </div>
+    <div class="row">
+        <a class="button is-dark is-outlined" style="text-decoration: solid;" href="{{url_for('techAnal')}}">Technical Analysis</a>
+    </div>
+    <div class="row">
+        <a class="button is-dark is-dark" style="text-decoration: solid;" href="">AI Analysis</a>
+    </div>
+</div>
+
+
+<form action="" method="POST">
+    <div class="center-container">
+        <h3 class="title is-3">Closing Price Prediction {{ticker}}</h3>
+
+        <div class="control">
+            <input class="input is-rounded is-dark" name="open" type="number" step="0.01" placeholder="Open" width="10%" style="margin: 5px;">
+          </div>
+          <div class="control">
+            <input class="input is-rounded is-dark" name="high" type="number" step="0.01" placeholder="High" width="10%" style="margin: 5px;">
+          </div>
+
+          <div class="control">
+            <input class="input is-rounded is-dark" name="low" type="number" step="0.01"placeholder="Low" width="10%" style="margin: 5px;">
+          </div>
+
+          <div class="control">
+            <input class="input is-rounded is-dark" name="volume" type="number" placeholder="Volume" width="10%" style="margin: 5px;">
+          </div>
+
+          <div class="control">
+            <div class="select is-rounded is-dark" style="margin: 5px;">
+              <select name="dropdown">
+                <option>Linear Regression</option>
+              </select>
+            </div>
+          </div>
+          <div class="control">
+            <button class="button is-dark">Predict</button>
+          </div>
+    </div>
+</form>
+
+
+
+{%endblock%}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Smart Stock Analyzer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+    <style>
+      .logo-link {
+       margin-right: 7px; /* Adjust the value as per your requirement */
+      }
+
+
+      .navbar-toggler-icon {
+  filter: invert(100%); /* This will make the arrow white */
+}
+
+
+
+
+
+    </style>
+
+  </head>
+  <body>
+
+
+
+
+   
+
+
+
+
+
+
+    <nav class="navbar is-dark navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{{url_for('hello')}}">
+          <img src="/static/images/hlogo.jpeg" alt="Logo" width="35" height="10" class="d-inline-block align-text-top" style=" margin: 2px;">
+
+           <h6 style="color: white; margin-top: 10px;">Smart Stock Analyzer</h6>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item" style="margin-top: 14px;">
+              <a class="nav-link active" aria-current="page" href="{{url_for('newsFun')}}"><h6 style="color: white; margin-top: 14px;">News</h6></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="margin-top: 14px;">
+                <h6 style="color: white;margin-top: 14px;">More</h6></a>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{{url_for('aboutMe')}}">About</a></li>
+                <li><a class="dropdown-item" href="{{url_for('contactUs')}}">Contact</a></li>
+              </ul>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+
+      {%block body%}
+      {%endblock%}
+
+      <footer class="footer is-dark">
+        <div class="content has-text-centered is-light">
+          <p>
+            <strong>Smart Stock Analyzer</strong> by <a href="https://www.linkedin.com/in/harsh01200/">Harsh Srivastava</a>.<br><strong> Disclaimer:</strong> The information provided on this website is for educational and informational purposes only and should not be considered as financial advice.
+          </p>
+        </div>
+      </footer>
+  </body>
+  
+</html>

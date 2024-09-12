@@ -1,0 +1,50 @@
+{% extends 'index.html' %}
+
+{% block body %}
+
+<style>
+    /* Custom CSS to align buttons in a row */
+    .rows {
+        display: flex;
+        justify-content: center;
+    }
+
+    .row {
+        margin: 10px;
+    }
+</style>
+
+<div class="rows">
+    <div class="row">
+        <a class="button is-dark is-dark" style="text-decoration: solid;" href="">Fundamental Analysis</a>
+    </div>
+    <div class="row">
+        <a class="button is-dark is-outlined" style="text-decoration: solid;" href="{{url_for('techAnal')}}">Technical Analysis</a>
+    </div>
+    <div class="row">
+        <a class="button is-dark is-outlined" style="text-decoration: solid;" href="{{url_for('aiAnal')}}">AI Analysis</a>
+    </div>
+</div>
+
+<div class="container">
+    <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+        <thead>
+            <th>Info Name</th>
+            <th>Info Details</th>
+        </thead>
+        <tbody>
+            {% for i in info %}
+            <tr>
+                <td>
+                    {{ i }}
+                </td>
+                <td>
+                    {{ info[i] }}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}
